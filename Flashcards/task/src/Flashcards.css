@@ -1,0 +1,119 @@
+
+/*background*/
+body {
+    background-image: url("https://static.displate.com/280x392/displate/2020-12-05/d692a1421864e285069445a66be75f8d_17529df63fd846fdc2df63eadc7d3484.jpg");
+}
+
+/*header*/
+h1 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+/*centering grid*/
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Container for flashcards to reside in 3x3 centred, fixed position*/
+.card-container{
+    /*background-color: aqua;*/
+    color: #25255F;
+    font-size: larger;
+
+    width: 90vmin;
+    height: 90vmin;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+
+/*rounded corners card-container*/
+    border-radius: 1em;
+}
+
+/*flashcards*/
+.flex-card {
+    /*background-color: #999;*/
+
+    width: 25vmin;
+    height: 25vmin;
+
+    text-align: center;
+
+/*rounded corners flashcards*/
+    border-radius: 1em;
+
+/*    !*flashcard flip transition and show back div element when card flips*!*/
+/*    transition: all 1s ease;*/
+/*    transform-style: preserve-3d;*/
+
+/*!*additional 3d effect*!*/
+/*    perspective: 1000px;*/
+}
+
+
+/*Align Front and Back faces of card container divs in z-axis*/
+.Front {
+    background-color: orange;
+    width: 25vmin;
+    height: 25vmin;
+    position: absolute;
+
+    border-radius: 1em;
+
+    z-index: 2;
+
+    backface-visibility: hidden;
+}
+
+.Back {
+    background-color: lightgreen;
+    width: 25vmin;
+    height: 25vmin;
+    position: absolute;
+    color: white;
+
+    border-radius: 1em;
+
+    z-index: 0;
+    /*margin: 20px;*/
+
+    transform: rotateY(180deg);
+}
+
+.Card {
+    /*background-color: darkblue;*/
+    /*width: 25vmin;*/
+    /*height: 25vmin;*/
+    /*position: absolute;*/
+    /*color: white;*/
+    position: absolute;
+
+    /*border-radius: 1em;*/
+
+    z-index: 1;
+
+    /*margin: 10px;*/
+}
+
+.container {
+    /*flashcard flip transition and show back div element when card flips*/
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+
+    /*additional 3d effect*/
+    perspective: 1000px;
+}
+
+/*rotate flashcards along y-axis by 180 degrees*/
+.container:hover {
+    transform: rotateY(180deg);
+}
+
+p {
+    font-family: 'Fredoka', sans-serif;
+}
